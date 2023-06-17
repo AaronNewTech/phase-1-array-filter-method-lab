@@ -2,14 +2,16 @@
 
 function findMatching(drivers, string) {
     
-    const result = drivers.filter(drivers => {
-        return drivers === string || drivers === string.toLowerCase()})
+    // filter function enters into array and filters results
+    
+    const result = drivers.filter(drivers => drivers === string || drivers === string.toLowerCase())
 
     return result
 }
 
 function fuzzyMatch(drivers, string) {
 
+    // fliter here uses the more basic form without { } brackets because we onlly have one condition to fulfill drivers[0] === string
     const result = drivers.filter(drivers => drivers[0] === string[0])
 
     return result
@@ -17,8 +19,8 @@ function fuzzyMatch(drivers, string) {
 
 function matchName(drivers, string) {
 
-    const result = drivers.filter(drivers => {
-        return drivers.name === string})
+    // we can use the same format or a shorter one like this 
+    const result = drivers.filter(drivers => drivers.name === string)
 
     return result
 
